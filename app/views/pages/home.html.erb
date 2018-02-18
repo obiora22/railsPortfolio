@@ -1,0 +1,11 @@
+<%= content_for :head do %>
+  Home
+<% end %>
+
+<h1>Home</h1>
+<%= @blogs.inspect %>
+<ul>
+  <% @blogs.each do |blog| %>
+    <li><%= blog.title %><li>
+  <% end %>
+</ul>
