@@ -23,7 +23,7 @@ Skill.create!({title: "HTML", proficiency_percent: 60})
     title: "Portfolio #{i}",
     subtitle: "Subtitle #{i}",
     body: Faker::Lorem.paragraph,
-    main_image: "main_image#{i}",
-    thumb_image: "thumb_image#{i}"
+    main_image: "http://via.placeholder.com/600x400",
+    thumb_image: "http://via.placeholder.com/350x200"
   )
 end 
