@@ -1,0 +1,16 @@
+<%= content_for :head do %>
+  Portfolio
+<% end %>
+
+<h1>Portfolio</h1>
+
+
+<% @portfolio_items.each do |portfolio_item|%>
+  <div>
+    <h2><%= portfolio_item.title %></h2>
+    <h2><%= portfolio_item.subtitle %></h2>
+    <p><%= portfolio_item.body %></p>
+    <%= image_tag portfolio_item.thumb_image %>
+  </div>
+  
+<% end %>
