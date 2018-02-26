@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :get_portfolio, only: [:show, :edit, :update]
+  before_action :get_portfolio, only: [:show, :edit, :update, :destroy]
 
   def index 
     @portfolio_items = Portfolio.all
@@ -38,6 +38,13 @@ class PortfoliosController < ApplicationController
     end 
 
   end 
+
+  def destroy 
+    @portfolio_item.delete
+    flash[:notice] = "Portfolio successfully deleted."
+    redirect_to portfolios_url 
+  end 
+
   private 
   
   def get_portfolio 
