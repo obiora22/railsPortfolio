@@ -12,8 +12,8 @@
     <p><%= portfolio_item.body %></p>
     <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
     <div class="portfolio-buttons">
-      <button><%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %></button>
-      <button><%= link_to "Delete", portfolio_path(portfolio_item.id), method: :delete %></button>
+      <button class="btn btn-success"><%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %></button>
+      <button class="btn btn-success"><%= link_to "Delete", portfolio_path(portfolio_item.id), method: :delete %></button>
     </div>
   </div>
   

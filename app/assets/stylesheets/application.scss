@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ a {
+   color: white!important;
+   &:hover {
+     text-decoration: none;
+   }
+ }
+ @import "bootstrap";
