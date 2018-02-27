@@ -1,0 +1,8 @@
+<% if object.errors.any? %>
+  <%= "You have #{pluralize(object.errors.size, 'error')}"%>
+  <div class="error-explanation">
+    <% object.errors.full_message do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  </div>
+<% end %>
