@@ -9,7 +9,7 @@
 50.times do |i| 
   title = "Blog #{i + 1}"
   body = Faker::Lorem.paragraph
-  Blog.create!({title: title, body: body})
+  Blog.create!({title: title, body: body, status: 0})
 end 
 
 Skill.create!({title: "Rails", proficiency_percent: 50}) 
