@@ -3,8 +3,14 @@ Rails.application.routes.draw do
   resources :portfolios, except: [:show]
 
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+  
+  # get 'blogs/:id/publish', to: 'blogs#toggle_status', as: 'blog_publish'
 
-  resources :blogs
+  resources :blogs do 
+    member do 
+      get 'publish', to: 'blogs#toggle_status'
+    end 
+  end 
 
   # get 'pages/home'
 

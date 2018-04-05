@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Blogs</h1>
 
@@ -19,6 +19,11 @@
         <td><%= link_to 'Show', blog %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if blog.draft? %>
+          <td><%= link_to 'Publish', publish_blog_path(blog.id) %></td>
+        <% else %>
+         <td><%= link_to 'Upublish', publish_blog_path(blog.id) %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -27,3 +32,4 @@
 <br>
 
 <%= link_to 'New Blog', new_blog_path %>
+
